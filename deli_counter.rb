@@ -10,7 +10,9 @@ katz_deli_queue()
   line(katz_deli) #=> "The line is currently: 1. Ada 2. Grace 3. Kent"
      
   now_serving(katz_deli) #=> "Currently serving Ada."
-end   
+  
+  return nil
+end
 
 take_a_number(katz_deli, name)
   katz_deli << name

@@ -18,6 +18,7 @@ take_a_number(katz_deli, name)
   katz_deli << name
   puts "Welcome, " + name + ". You are number" + katz_deli.length.to_s + "in line." 
   
+  return nil
 end
 
 line(katz_deli)
@@ -26,4 +27,6 @@ line(katz_deli)
   else 
     puts "There is nobody waiting to be served!"
   end
+  
+  return nil
 end

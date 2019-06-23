@@ -1,8 +1,9 @@
-  katz_deli = []
+katz_deli = []
      
   
 def take_a_number(katz_deli, name)
   katz_deli << name
+  # I may be able to remove the to_s, the docs say it is done automatically
   spot = katz_deli.length.to_s
   puts "Welcome, " + name + ". You are number " + spot + " in line." 
   
@@ -11,33 +12,33 @@ end
 
 
 def line(katz_deli)
-  if katz_deli.length != 0
-    line_s = []
-    katz_deli.each_with_index do |name, i|
-      spot = i + 1
-      line_s << spot.to_s + "."
-      #line_s << "." 
-      line_s << name
-    
-    end
-    puts "The line is currently: " + line_s.join(" ")
-
-    return nil
-
-  else
+  if katz_deli.length = 0
     puts "The Line is currently empty"  
 
     return nil
-
+  else
+    line_s = []
+    katz_deli.each_with_index do |name, i|
+      spot = i + 1
+      # see line 6
+      line_s << spot.to_s + "."
+      line_s << name
+    
   end
+  puts "The line is currently: " + line_s.join(" ")
+
+  return nil
+
 end
 
 def now_serving(katz_deli)
-  if katz_deli.length != 0 
-    puts "Currently serving " + katz_deli.shift + "." 
-    return nil
-  else 
+  if katz_deli.length = 0
     puts "There is nobody waiting to be served!"
+    
+    return nil
+  else
+    puts "Currently serving " + katz_deli.shift + "." 
+    
     return nil
   end
 end
